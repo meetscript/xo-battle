@@ -230,4 +230,10 @@ button.toggle{
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgb(148, 142, 142);
 }
-  
+  .allrules{
+  width:90vw;
+  background-color: #f193b2;
+  border-radius: 10px;
+  margin-left: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

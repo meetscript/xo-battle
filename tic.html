@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+     <link rel="stylesheet" href="tic.css" />
+     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+<body class ="light-mode">
+  <div class="navbar">
+    <h1 style="color: #5ba7b4;">Tic Tac Toe</h1>
+    <div class="navcont">
+       <button class="toggle" onclick="toggle()"><img id="icon" src="dark.png" alt="light" width="20px">  </button>
+       <button id="about">about us</button>
+    </div>
+   
+  </div> 
+   <div class="buttongroup">
+    <button class="groupbutton" onclick="resetGame()">Restart</button>
+  <button class="groupbutton" id="undoBtn"  onclick="undo()">undo</button>
+  <button class="groupbutton" id="redoBtn" onclick="redo()">redo</button>
+  </div>
+ <div class="board">
+  <div class="cell" data-row="0" data-col="0"></div>
+  <div class="cell" data-row="0" data-col="1"></div>
+  <div class="cell" data-row="0" data-col="2"></div>
+  <div class="cell" data-row="1" data-col="0"></div>
+  <div class="cell" data-row="1" data-col="1"></div>
+  <div class="cell" data-row="1" data-col="2"></div>
+  <div class="cell" data-row="2" data-col="0"></div>
+  <div class="cell" data-row="2" data-col="1"></div>
+  <div class="cell" data-row="2" data-col="2"></div>
+</div>
+<div id="winnerMessage" style="display: none;" class="message-box"></div>
+  <div id="emojiContainer"></div>
+  <div class="aboutbox " style="display: none;">
+    <button style="width:20px ; height: 20px; font-weight: bold;" id="removeabout">x</button>
+     <div class="aboutus" >
+  <p>   My name is Meet Rathod. I’m a 
+    third-year Computer Science Engineering 
+    student at MSU with strong skills in C++, 
+          data structures, 
+    and algorithms. I’ve solved over 100 Leetcode
+     problems independently I’m passionate about becoming 
+     a top-tier software engineer, 
+       while also learning full-stack development and AI.</p>
+ </div>
+  </div>
+<div class="bot">
+  <div class="checkbox">
+     <label>
+  <input type="checkbox" id="playWithBot"> Play With Bot
+</label>
+  </div>
+  
+<div class="levels">
+   <span style="  color: #7196e5;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;">Bot Level:</span>
+  <select id="botLevel" disabled>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="medhard">MedHard</option>
+    <option value="hard" selected>Hard</option>
+  </select>
+</div>
+ </div>
+ <div class="rule">
+  <button id="rules" >rules</button>
+ </div>
+  <div class="allrules" style="display:none;">
+   <ol type="1">
+  <li>You cannot switch the player mode in the middle of the game. For example, switching from 2-player mode to play with bot is not allowed without restarting the game.</li><br>
+  <li>Changing the bot difficulty level is not permitted during an ongoing game.</li><br>
+  <li>Undo and redo functionalities are disabled while playing with the bot.</li>
+</ol>
+
+  </div>
+    <script src="tic.js">
+    </script>
+</body>
+</html>
+

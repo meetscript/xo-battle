@@ -1,0 +1,216 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+body.light-mode{
+  background-color: antiquewhite;
+  color: black;
+}
+body.dark-mode{
+  background-color:#334155;
+   color: white;
+}
+.board{
+    display: grid;
+   grid-template-columns: repeat(3, 100px); 
+  grid-template-rows: repeat(3, 100px); 
+  margin-top: 50px; 
+  gap: 5px;
+  justify-self: center;
+}
+.navcont{
+  width:30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 30px;
+}
+button.toggle{
+  width:100px;
+  width:30px;
+  height: 30px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+}
+#about{
+  background-color: #202327;
+  border: none;
+  color: white;
+  font-size: medium;
+}
+#about:hover{
+  text-decoration: underline;
+  color: rgb(77, 232, 232);
+}
+.navbar{
+  background-color: #202327;
+   height: 50px;
+   width: 100vw; position:fixed;
+   padding-left: 20px;
+   padding-right: 30px;
+   justify-content: space-between;
+   color: white;
+   display: flex;
+   align-items: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  top: 0;
+}
+.cell{
+    border: 1px solid black;
+    background-color: rgb(244, 152, 196);
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.cell:hover{
+    background-color: rgb(181, 145, 214);
+}
+.message-box {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e72f6d;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 24px;
+  box-shadow: 10px 10px 10px rgba(106, 129, 223, 0.5),-10px -10px 10px rgba(213, 106, 106, 0.5);
+  z-index: 1000;
+   animation: popIn 0.5s forwards;
+}
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.buttongroup{
+  margin-top:100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap:120px;
+}
+.groupbutton{
+  width:80px;
+  height: 40px;
+  background-color: #ecd77b;
+  color: #23545d;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(148, 142, 142);
+}
+.groupbutton:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#emojiContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* don't block clicks */
+  overflow: hidden;
+  z-index: 999;
+}
+
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: fall 2s linear infinite;
+}
+.aboutbox{
+    background-color:rgba(247, 252, 157, 0.605);
+    padding-left: 5px;
+  width: 280px;
+  height: 400px;
+  box-shadow: 10px 10px 10px rgb(74, 72, 72);
+   position: fixed;
+     top:25vh;
+     left: 25vw;
+     border-radius: 10px; 
+     color: black;
+     z-index: 10000; 
+}
+ .aboutus{ 
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: none;
+    -ms-overflow-style: none;
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+ }
+ .bot{
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap:70px;
+ }
+ .checkbox{
+   color: #7196e5;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+ }
+ .checkbox:hover{
+ transform: scale(1.1); 
+ cursor: pointer;
+ }
+ #botLevel{
+  background-color: #ecd77b;
+  color: #23545d;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border: none;
+  font-size: 17px;
+  border-radius: 10px;
+ }
+@keyframes fall {
+  0% {
+    top: -5%;
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+@keyframes rotateOnce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate{
+  animation: rotateOnce 0.6s ease;
+}
+@media screen and (max-width: 500px) {
+  .buttongroup{
+    gap:40px;
+  }
+  .bot{
+    gap:20px;
+  }
+  .aboutbox{
+    left:10vw;
+  }
+}

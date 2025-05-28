@@ -217,6 +217,7 @@ function resetGame() {
   document.getElementById("undoBtn").disabled = playWithBot;
   document.getElementById("redoBtn").disabled = playWithBot;
   document.getElementById("botLevel").disabled = !playWithBot;
+   document.querySelector(".allrules").style.display="none";
 }
 
 
@@ -393,4 +394,7 @@ document.getElementById("removeabout").addEventListener("click",()=>{
       aboutopen=false;
       const about = document.querySelector(".aboutbox");
    about.style.display="none";
+});
+document.getElementById("rules").addEventListener("click",()=>{
+     document.querySelector(".allrules").style.display="block";
 });

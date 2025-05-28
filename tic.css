@@ -214,3 +214,20 @@ button.toggle{
     left:10vw;
   }
 }
+.rule{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#rules{
+    width:80px;
+  height: 40px;
+  background-color: #ecd77b;
+  color: #23545d;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(148, 142, 142);
+}
+  
